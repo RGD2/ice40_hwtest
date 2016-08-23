@@ -1,0 +1,16 @@
+
+icetime topological timing analysis report
+==========================================
+
+Warning: This timing analysis report is an estimate!
+Info: max_span_hack is enabled: estimate is conservative.
+
+Report for critical path:
+-------------------------
+
+        pre_io_33_28_0 (PRE_IO) [clk] -> PADOUT: 0.240 ns
+     0.240 ns io_pad_33_28_0_din
+
+Total number of logic levels: 0
+Total path delay: 0.24 ns (4161.98 MHz)
+

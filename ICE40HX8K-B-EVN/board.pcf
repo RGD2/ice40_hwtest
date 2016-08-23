@@ -1,0 +1,123 @@
+set_io pclk J3
+#set_io reset A16
+
+set_io D[0] C16
+set_io D[1] D16
+set_io D[2] E16
+set_io D[3] F16
+set_io D[4] G16
+set_io D[5] H16
+set_io D[6] J15
+set_io D[7] G14
+set_io D[8] K14
+set_io D[9] K15
+set_io D[10] M16
+set_io D[11] N16
+set_io D[12] P16
+
+set_io D[13] B16
+set_io D[14] D14
+set_io D[15] D15
+set_io D[16] E14
+set_io D[17] F15
+set_io D[18] G15
+set_io D[19] H14
+set_io D[20] F14
+set_io D[21] J14
+set_io D[22] K16
+set_io D[23] L16
+set_io D[24] M15
+set_io D[25] P15
+set_io D[26] R15
+
+set_io D[27] A2
+set_io D[28] B4
+set_io D[29] B5
+set_io D[30] A5
+set_io D[31] B6
+set_io D[32] A6
+set_io D[33] B7
+set_io D[34] B8
+set_io D[35] A9
+set_io D[36] A10
+set_io D[37] A11
+set_io D[38] B12
+set_io D[39] B13
+set_io D[40] A15
+set_io D[41] A16
+
+set_io D[42] A1
+set_io D[43] B3
+set_io D[44] C3
+set_io D[45] C4
+set_io D[46] C5
+set_io D[47] C6
+set_io D[48] C7
+set_io D[49] A7
+set_io D[50] B9
+set_io D[51] B10
+set_io D[52] B11
+set_io D[53] B14
+set_io D[54] B15
+
+set_io D[55] T1
+set_io D[56] R2
+set_io D[57] R3
+set_io D[58] T5
+set_io D[59] T6
+set_io D[60] T7
+set_io D[61] T9
+set_io D[62] P8
+set_io D[63] T10
+set_io D[64] T11
+set_io D[65] N10
+set_io D[66] N12
+set_io D[67] T13
+set_io D[68] T15
+set_io D[69] R16
+
+set_io D[70] T2
+set_io D[71] T3
+set_io D[72] R4
+set_io D[73] R5
+set_io D[74] R6
+set_io D[75] T8
+set_io D[76] R9
+set_io D[77] P9
+set_io D[78] R10
+set_io D[79] P10
+set_io D[80] M11
+set_io D[81] P13
+set_io D[82] T14
+set_io D[83] T16
+
+set_io D[84] B1
+set_io D[85] C1
+set_io D[86] D1
+set_io D[87] E2
+set_io D[88] F2
+set_io D[89] G2
+set_io D[90] H2
+set_io D[91] J2
+set_io D[92] K3
+set_io D[93] L3
+set_io D[94] M2
+set_io D[95] N3
+set_io D[96] P1
+
+
+set_io D[97] B2
+set_io D[98] C2
+set_io D[99] D2
+set_io D[100] F1
+set_io D[101] G1
+set_io D[102] H1
+set_io D[103] J1
+set_io D[104] K1
+set_io D[105] L1
+set_io D[106] M1
+set_io D[107] N2
+set_io D[108] P2
+set_io D[109] R1
+
+
