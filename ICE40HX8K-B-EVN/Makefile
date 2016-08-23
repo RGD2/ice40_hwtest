@@ -2,11 +2,12 @@ PROJ = top
 PIN_DEF = board.pcf
 DEVICE = hx8k
 PACKAGE = ct256
+VERILOGS = top.v spimaster.v
 
 all: $(PROJ).rpt $(PROJ).bin
 
-%.blif: %.v
-	yosys -p 'synth_ice40 -top top -blif $@' $<
+$(PROJ).blif: $(VERILOGS)
+	yosys -p 'synth_ice40 -top top -abc2 -blif $@' $(VERILOGS)
 	yosys -V > .version-yosys.txt
 
 

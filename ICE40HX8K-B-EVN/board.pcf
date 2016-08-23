@@ -1,6 +1,10 @@
 set_io pclk J3
 #set_io reset A16
 
+set_io SCL P10
+set_io MOSI N12
+set_io MISO N10
+
 set_io D[0] C16
 set_io D[1] D16
 set_io D[2] E16
@@ -70,55 +74,52 @@ set_io D[61] T9
 set_io D[62] P8
 set_io D[63] T10
 set_io D[64] T11
-set_io D[65] N10
-set_io D[66] N12
-set_io D[67] T13
-set_io D[68] T15
-set_io D[69] R16
+set_io D[65] T13
+set_io D[66] T15
+set_io D[67] R16
 
-set_io D[70] T2
-set_io D[71] T3
-set_io D[72] R4
-set_io D[73] R5
-set_io D[74] R6
-set_io D[75] T8
-set_io D[76] R9
-set_io D[77] P9
-set_io D[78] R10
-set_io D[79] P10
-set_io D[80] M11
-set_io D[81] P13
-set_io D[82] T14
-set_io D[83] T16
+set_io D[68] T2
+set_io D[69] T3
+set_io D[70] R4
+set_io D[71] R5
+set_io D[72] R6
+set_io D[73] T8
+set_io D[74] R9
+set_io D[75] P9
+set_io D[76] R10
+set_io D[77] M11
+set_io D[78] P13
+set_io D[79] T14
+set_io D[80] T16
 
-set_io D[84] B1
-set_io D[85] C1
-set_io D[86] D1
-set_io D[87] E2
-set_io D[88] F2
-set_io D[89] G2
-set_io D[90] H2
-set_io D[91] J2
-set_io D[92] K3
-set_io D[93] L3
-set_io D[94] M2
-set_io D[95] N3
-set_io D[96] P1
+set_io D[81] B1
+set_io D[82] C1
+set_io D[83] D1
+set_io D[84] E2
+set_io D[85] F2
+set_io D[86] G2
+set_io D[87] H2
+set_io D[88] J2
+set_io D[89] K3
+set_io D[90] L3
+set_io D[91] M2
+set_io D[92] N3
+set_io D[93] P1
 
 
-set_io D[97] B2
-set_io D[98] C2
-set_io D[99] D2
-set_io D[100] F1
-set_io D[101] G1
-set_io D[102] H1
-set_io D[103] J1
-set_io D[104] K1
-set_io D[105] L1
-set_io D[106] M1
-set_io D[107] N2
-set_io D[108] P2
-set_io D[109] R1
+set_io D[94] B2
+set_io D[95] C2
+set_io D[96] D2
+set_io D[97] F1
+set_io D[98] G1
+set_io D[99] H1
+set_io D[100] J1
+set_io D[101] K1
+set_io D[102] L1
+set_io D[103] M1
+set_io D[104] N2
+set_io D[105] P2
+set_io D[106] R1
 
 
 

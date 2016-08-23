@@ -1,1 +1,1 @@
-arachne-pnr 0.1+157+0 (git sha1 e0d7af8, g++ 4.8.4-2ubuntu1~14.04.3 -O2)
+arachne-pnr 0.1+171+0 (git sha1 52e69ed, g++ 4.8.4-2ubuntu1~14.04.3 -O2)

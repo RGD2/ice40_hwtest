@@ -1,6 +1,9 @@
 module top (
     input pclk,
-    output [109:0] D
+    output [106:0] D,
+    output SCL,
+    output MOSI,
+    input MISO
 );
 
     localparam BITS = 5;
@@ -23,11 +26,23 @@ module top (
         counter <= counter + 1;
         
         
-    reg [109:0] rng = 110'b00000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000;
+    reg [106:0] rng =107'b00000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000;
     
     always@(posedge counter[LOG2DELAY-2])
-        rng <= ({rng[0],(rng >> 1)})^(rng | {(rng << 1),rng[109]});        
+        rng <= ({rng[0],(rng >> 1)})^(rng | {(rng << 1),rng[106]});        
         
     assign D = rng;  // = bin2gray(counter >> LOG2DELAY-1);
     
+wire [15:0] spirx;
+wire spirunning;
+spimaster _spi (        .clk(pclk),
+                                .we(counter[16]),
+                                .both(counter[17]),
+                                .tx(rng[15:0]),
+                                .rx(spirx),
+                                .running(spirunning),
+                                .MOSI(MOSI),
+                                .SCL(SCL),
+                                .MISO(MISO));
+
 endmodule 
