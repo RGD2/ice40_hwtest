@@ -1,20 +1,34 @@
+PROJ = top
+PIN_DEF = board.pcf
+DEVICE = hx1k
 
+all: $(PROJ).rpt $(PROJ).bin
 
-upload: top.bin
-	sudo iceprog top.bin 
-
-top.bin: top.asc
-	icepack top.asc top.bin 
-
-top.asc: top.blif
-	arachne-pnr -v > .version-arachne-pnr.txt
-	arachne-pnr -d 1k -p board.pcf -o top.asc top.blif 
-
-top.blif: top.v
+%.blif: %.v
+	yosys -p 'synth_ice40 -top top -blif $@' $<
 	yosys -V > .version-yosys.txt
-	yosys -p "read_verilog top.v; synth_ice40 -blif top.blif"
+
+
+%.asc: $(PIN_DEF) %.blif
+	arachne-pnr -d $(subst hx,,$(subst lp,,$(DEVICE))) -o $@ -p $^
+	arachne-pnr -v > .version-arachne-pnr.txt
+
+
+%.bin: %.asc
+	icepack $< $@
+
+%.rpt: %.asc
+	icetime -d $(DEVICE) -mtr $@ $<
+
+prog: $(PROJ).bin
+	iceprog $<
+
+sudo-prog: $(PROJ).bin
+	@echo 'Executing prog as root!!!'
+	sudo iceprog $<
 
 clean:
-	rm -f top.bin top.asc top.blif
+	rm -f $(PROJ).blif $(PROJ).asc $(PROJ).rpt $(PROJ).bin .version-*.txt 
 
-PHONY: clean upload
+.SECONDARY:
+.PHONY: all prog clean

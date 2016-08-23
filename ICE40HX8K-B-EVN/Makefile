@@ -1,6 +1,7 @@
 PROJ = top
 PIN_DEF = board.pcf
 DEVICE = hx8k
+PACKAGE = ct256
 
 all: $(PROJ).rpt $(PROJ).bin
 
@@ -10,7 +11,7 @@ all: $(PROJ).rpt $(PROJ).bin
 
 
 %.asc: $(PIN_DEF) %.blif
-	arachne-pnr -d $(subst hx,,$(subst lp,,$(DEVICE))) -o $@ -p $^
+	arachne-pnr -d $(subst hx,,$(subst lp,,$(DEVICE))) -P $(PACKAGE) -o $@ -p $^
 	arachne-pnr -v > .version-arachne-pnr.txt
 
 
