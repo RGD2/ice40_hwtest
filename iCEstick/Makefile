@@ -3,8 +3,13 @@
 upload: top.bin
 	sudo iceprog top.bin 
 
+all: top.bin
+	arachne-pnr -v > .version-arachne-pnr.txt
+	yosys -V > .version-yosys.txt
+
+
 top.bin: top.asc
-	icepack top.txt top.bin 
+	icepack top.asc top.bin 
 
 top.asc: top.blif
 	arachne-pnr -d 1k -p board.pcf -o top.asc top.blif 
